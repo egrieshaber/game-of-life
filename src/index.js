@@ -2,14 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+class Box extends React.Component {
+  selectBox = () => {
+    this.props.selectBox(this.props.row, this.props.col);
+  }
+
+  render() {
+    return (
+      <div
+        className={this.props.boxClass}
+        id={this.props.id}
+        onClick={this.selectBox}
+      />
+    );
+  }
+}
+
 class Grid extends React.Component {
   render() {
-    const width = this.props.cols * 14;
-    let rowsArr = [];
+    const width = (this.props.cols * 16);
+    var rowsArr = [];
 
-    let boxClass = "";
-    for (let i = 0; i < this.props.rows; i++) {
-      for (let j = 0; j < this.props.cols; j++) {
+    var boxClass = "";
+    for (var i = 0; i < this.props.rows; i++) {
+      for (var j = 0; j < this.props.cols; j++) {
         let boxId = i + "_" + j;
 
         boxClass = this.props.gridFull[i][j] ? "box on" : "box off";
@@ -22,15 +38,15 @@ class Grid extends React.Component {
             col={j}
             selectBox={this.props.selectBox}
           />
-          )
+        );
       }
     }
 
     return (
       <div className="grid" style={{width: width}}>
-        {{rowsArr}}
+        {rowsArr}
       </div>
-    )
+    );
   }
 }
 
