@@ -128,7 +128,7 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        <h1>The Game Of Life</h1>
+        <h1>Dave Public's Game Of Life</h1>
         <Grid
           gridFull={this.state.gridFull}
           rows={this.rows}
