@@ -1,8 +1,8 @@
 {
   "name": "game-of-life",
+  "homepage": "https://egrieshaber.github.io/game-of-life/",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/egrieshaber/game-of-life",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
