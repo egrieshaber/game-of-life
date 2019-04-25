@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/egrieshaber/game-of-life/static/css/main.162ddc4b.chunk.css",
-    "main.js": "/egrieshaber/game-of-life/static/js/main.760a51c3.chunk.js",
-    "main.js.map": "/egrieshaber/game-of-life/static/js/main.760a51c3.chunk.js.map",
-    "runtime~main.js": "/egrieshaber/game-of-life/static/js/runtime~main.13bc40d1.js",
-    "runtime~main.js.map": "/egrieshaber/game-of-life/static/js/runtime~main.13bc40d1.js.map",
-    "static/js/2.98dcc9dd.chunk.js": "/egrieshaber/game-of-life/static/js/2.98dcc9dd.chunk.js",
-    "static/js/2.98dcc9dd.chunk.js.map": "/egrieshaber/game-of-life/static/js/2.98dcc9dd.chunk.js.map",
-    "index.html": "/egrieshaber/game-of-life/index.html",
-    "precache-manifest.01bcb825a812ad9375045ac631fe1f2a.js": "/egrieshaber/game-of-life/precache-manifest.01bcb825a812ad9375045ac631fe1f2a.js",
-    "service-worker.js": "/egrieshaber/game-of-life/service-worker.js",
-    "static/css/main.162ddc4b.chunk.css.map": "/egrieshaber/game-of-life/static/css/main.162ddc4b.chunk.css.map"
+    "main.css": "/game-of-life/static/css/main.162ddc4b.chunk.css",
+    "main.js": "/game-of-life/static/js/main.760a51c3.chunk.js",
+    "main.js.map": "/game-of-life/static/js/main.760a51c3.chunk.js.map",
+    "runtime~main.js": "/game-of-life/static/js/runtime~main.dfaa7c2d.js",
+    "runtime~main.js.map": "/game-of-life/static/js/runtime~main.dfaa7c2d.js.map",
+    "static/js/2.98dcc9dd.chunk.js": "/game-of-life/static/js/2.98dcc9dd.chunk.js",
+    "static/js/2.98dcc9dd.chunk.js.map": "/game-of-life/static/js/2.98dcc9dd.chunk.js.map",
+    "index.html": "/game-of-life/index.html",
+    "precache-manifest.74209611c44dff1a4182275a22154754.js": "/game-of-life/precache-manifest.74209611c44dff1a4182275a22154754.js",
+    "service-worker.js": "/game-of-life/service-worker.js",
+    "static/css/main.162ddc4b.chunk.css.map": "/game-of-life/static/css/main.162ddc4b.chunk.css.map"
   }
 }
