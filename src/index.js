@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { ButtonToolbar, DropdownItem, DropdownButton } from 'react-bootstrap';
 
 class Box extends React.Component {
   selectBox = () => {
@@ -21,6 +22,7 @@ class Box extends React.Component {
 class Grid extends React.Component {
   render() {
     const width = (this.props.cols * 16);
+    const height = (this.props.rows * 3);
     var rowsArr = [];
 
     var boxClass = "";
@@ -43,10 +45,52 @@ class Grid extends React.Component {
     }
 
     return (
-      <div className="grid" style={{width: width}}>
+      <div className="grid" style={{width: width, height: height}}>
         {rowsArr}
       </div>
     );
+  }
+}
+
+class Buttons extends React.Component {
+
+  handleSelect = (evt) => {
+    this.props.gridSize(evt);
+  }
+  render() {
+    return (
+      <div className="center">
+        <ButtonToolbar>
+          <button className="btn btn-deafult" onClick={this.props.playButton}>
+            Play
+          </button>
+          <button className="btn btn-deafult" onClick={this.props.pauseButton}>
+            Pause
+          </button>
+          <button className="btn btn-deafult" onClick={this.props.clear}>
+            Clear
+          </button>
+          <button className="btn btn-deafult" onClick={this.props.slow}>
+            Slow
+          </button>
+          <button className="btn btn-deafult" onClick={this.props.fast}>
+            Fast
+          </button>
+          <button className="btn btn-deafult" onClick={this.props.seed}>
+            Seed
+          </button>
+          <DropdownButton
+            title="Grid Size"
+            id="size-menu"
+            onSelect={this.handleSelect}
+          >
+            <DropdownItem eventKey="1">20x10</DropdownItem>
+            <DropdownItem eventKey="2">50x30</DropdownItem>
+            <DropdownItem eventKey="3">75x50</DropdownItem>
+          </DropdownButton>
+        </ButtonToolbar>
+      </div>
+    )
   }
 }
 
@@ -54,7 +98,7 @@ class Main extends React.Component {
   constructor() {
     super();
     this.speed = 100;
-    this.rows = 30;
+    this.rows = 140;
     this.cols = 50;
 
     this.state = {
@@ -75,6 +119,10 @@ class Main extends React.Component {
   playButton = () => {
     clearInterval(this.intervalId)
     this.intervalId = setInterval(this.play, this.speed);
+  }
+
+  pauseButton = () => {
+    clearInterval(this.intervalId);
   }
 
   play = () => {
@@ -129,6 +177,15 @@ class Main extends React.Component {
     return (
       <div>
         <h1>Dave Public's Game Of Life</h1>
+        <Buttons
+          playButton={this.playButton}
+          pauseButton={this.pauseButton}
+          slow={this.slow}
+          fast={this.fast}
+          clear={this.clear}
+          seed={this.seed}
+          gridSize={this.gridSize}
+        />
         <Grid
           gridFull={this.state.gridFull}
           rows={this.rows}
